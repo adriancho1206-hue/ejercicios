@@ -1,0 +1,32 @@
+<script>
+function validarFormulario(nombre, correo) {
+if (nombre. trim() === "") {
+throw new Error("El nombre no puede estar vacio")
+
+}
+
+if (!correo.includes("@")) {
+throw new Error("El correo no tiene un formato valido")
+
+}
+
+return "Formulario valido"
+
+
+}
+try{
+let resultado = validarFormulario("Adrian", "adrian@gmail.com")
+console.log(resultado)
+
+
+} catch (error) {
+console.log("Error:", error.message)
+}
+
+
+
+
+
+
+
+</script>
