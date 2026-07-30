@@ -1,0 +1,22 @@
+<script>
+function validarEdad() {
+ if (edad < 0){
+ throw new Error ("La edad no puede ser negativa")
+
+ }
+
+return "Edad valida: " + edad;
+
+}
+
+try {
+document.write(validarEdad(15) + "<br>")
+document.write(validarEdad(-2));
+
+
+} catch (error) {
+    document.write("Error: " + error.message)
+}
+
+
+</script>
