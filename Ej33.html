@@ -1,4 +1,28 @@
 <script>
+//Ejemplo 1//
+function contador() {
+let cuenta = 0;
+return function () {
+cuenta++;
+return cuenta;
+
+};
+
+}
+const miContador = contador();
+console.log(miContador()); // 1
+console.log(miContador()); // 2
+
+//Ejemplo 2//
+console.log(x); // undefined (var se 'eleva' pero sin valor)
+var x = 5;
+
+console.log(y); //ReferenceError
+let y = 10
+
+
+
+
 if (true) {
 
 var variableVar= "Soy una variable con Var";
