@@ -1,0 +1,40 @@
+<script>
+
+/*Ejemplo 1*/
+try {
+JSON.parse("{invalido}")
+
+} catch (error) {
+    console.log("Ocurrio un error:", error.message);
+} finally {
+    console.log("Proceso finalizado");
+}
+
+/*Ejemplo 2*/
+function dividir(a, b) {
+if (b === 0) {
+throw new Error("No se puede dividir entre cero");
+
+}
+return a / b;
+
+}
+try {
+dividir(10, 0);
+} catch (e) {
+console.log(e.message);
+
+}
+
+
+try {
+let usuario
+console.log(usuario.nombre);
+
+} catch (error) {
+    console.log("Ocurrio un error")
+    console.log(error.message)
+}
+
+</script>
+
