@@ -1,0 +1,39 @@
+<script>
+
+function cuentaBanc() {
+let saldo = 0;
+
+return {
+depositar: function (monto) {
+saldo += monto;
+console.log("Deposito realizado. Saldo actual: $" + saldo)
+
+},
+
+retirar: function (monto) {
+if (monto <= saldo) {
+saldo -= monto; 
+console.log("Retiro realizado. Saldo actual: $" + saldo)
+
+} else {
+console.log("Fondos insuficientes.");
+
+}
+
+}
+
+}
+
+}
+
+const cuenta = cuentaBanc();
+
+cuenta.depositar(500);
+cuenta.depositar(300);
+cuenta.retirar(200);
+cuenta.retirar(700);
+
+
+
+
+</script>
